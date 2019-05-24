@@ -1,0 +1,170 @@
+/*        by ilshaad kheerdali 2018 */
+/* UPDATED 2019 02 24 : this flexbox css template is not as flexible as css grid, therefore this is only ideal if you are targetting mobile/tablet (with 1 column) user or browsers that is not css grid supported.
+     +\ it is difficult getting a good responsive sticky footer layout when you are using media query 768px and upper to get more than one column. So either you use just header/main/footer and do everything inside it or sacrifice sticky footer as that is link to flex.
+		+\ plus it is a nightmare to set gaps between the containers if you wanted
+*/
+/* THE SET UP COLUMN FOR STICKY FOOTER AND BACKGROUND IMAGE */
+*,
+*::before,
+*::after    {
+    box-sizing: border-box;
+/*    font-size: 100%;   - apparently this negate the actual size of h2/h3/etc */
+}
+
+/***********************************/
+
+/* STICKY FOOTER */
+:root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer
+	+\ also this must be used with header/main/footer otherwise flex.D: column changes the format*/
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer
+	+\ also this must be used with header/main/footer otherwise flex.D: column changes the format*/
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.4;
+}
+
+div#body_wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    /* IMPORTANT IK display/f.direction/m.height   is for sticky footer but be sure to add margin-top: auto; on the main footer  */
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.4;
+/*    its a copy only because you want it to be in sync with the body plus you now have extra container to customize (.bodywrapper) without having to touch the body*/
+    width: 100%;
+    margin: auto;
+	font-family: ;
+
+}
+
+footer#main_footer {
+    margin-top: auto; /*always keep so it stay as a sticky footer*/
+}
+/*ik after choosing either :root / body / div#body_wrapper , delete the other 2, but first check with img#backgroundImg if everything is all good
+
++\ ik personal thoughts. after experimenting i notice that it is perfect for mobile first with the columns, and you can add extra containers but in media query 768px and upper you cannot move the containers otherwise sticky footer will not apply. so do not move header / main / footer , and just do everything inside those containers , including navbar.
+     +\ plus it is not so easy to create gaps between header / main / footer , so that you can see more of the background image if any
+     +\ css grid is much more flexible than flexbox */
+
+/********************************/
+
+/* BACKGROUND IMAGE
+inserting main background images which will always center and cover to whole page.  2 ways you can choose ik (https://css-tricks.com/perfect-full-page-background-image/  = for more info on 'Perfect Full Page Background Image' )
+.1st way = #Awesome, Easy, Progressive CSS3 Way -*/   /*
+div#background_image {
+  background: url(iKinsertImageHere) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+/*+\ main reason to use this is if you want to use the other background properties and style it further .
++\ be sure that the div box is place before body and div#body_wrapper as this will be an exclusive div box.
++\ also do not forget to add an extra background-color for fall back
++\ insert position: relative; on the div#body_wrapper otherwise it you will not see work
+-
+.2nd way = #CSS-Only Technique #1
++\ first simple set image in <img id="backgroundImg"> within your div#background_image html*/   /*
+img#backgroundImg {
+/*Set rules to fill background * /
+  min-height: 100%;
+  min-width: 1024px;     /*ik this is eg, but set the width image px here * /
+/* Set up proportionate scaling * /
+  width: 100%;
+  height: auto;
+/* Set up positioning * /
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {   /*Specific to this particular image * /
+  img#backgroundImg {
+    left: 50%;
+    margin-left: -512px;   /* 50% of 1024px,  ik this is eg, but set half of width image px here * /
+  }
+}
+*/
+/*+\ main reason to use this is if you have a fairly large image and you do not need to use any of the background properties than this is a good choice
++\ also do not forget to add an extra background-color for fall back
++\ insert position: relative; on the div#body_wrapper otherwise it you will not see work
+*/
+
+/* STICKY FOOTER AND BACKGROUND IMAGE OVER AND NOW DESIGN YOUR WEB SITE */
+
+/*
+++++++++++++++++++++++++++++++++
+CLEARFIX   for floated elements
+++++++++++++++++++++++++++++++++
+*/
+.clearfixik::before,
+.clearfixik::after    {
+    content: " ";
+    clear: both;
+    display: table;
+}
+/*slightly change its name because of bootstrap .clearfix version which uses display: block;*/
+
+/*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+BASE SYNTAX FOR ALL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+*/
+
+/* ik recommended eg prefix with your css properties:
+-webkit-transform:translateZ( -150px );
+   -moz-transform:translateZ( -150px );
+    -ms-transform:translateZ( -150px );
+     -o-transform:translateZ( -150px );
+        transform:translateZ( -150px );
+   */
+
+div#body_wrapper {
+	position: relative; /* for image background */
+
+} /* or whatever body wrapper with flex you chose out of the 3 */
+
+header#main_header {
+}
+
+main#main_page {
+}
+
+footer#main_footer {
+}
+
+/* ik i am still undecided if i should just use @media alone instead of the other things, need more research , but for now delete 'only screen and' */
+/* specific mobile css */
+@media only screen and (max-width: 767px) /*480px main focus*/ {
+
+}
+
+
+/* 768px plus 700px landscape */
+@media only screen and (min-width: 768px),
+       only screen and (min-width: 700px) and (orientation: landscape) /*might want to consider 768px but test it out first*/ {
+
+}
+
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/* 1200px */
+@media only screen and (min-width: 1200px) {
+
+}

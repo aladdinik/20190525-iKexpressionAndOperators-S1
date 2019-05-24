@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- enter brief description of the page-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<!--    <link href="zIK/02css/aReset.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/normalize.css" rel="stylesheet" type="text/css">-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
+    <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
+    <title>20190522 iK personal css grid responsive design</title>
+<style>
+/* + + + + + + + + + + + + + STYLE -------------------------------*/
+
+
+	.grid {
+		min-width: 100vw;
+		min-height: 100vh;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr) repeat(3, 1fr) repeat(2, 1fr);
+		grid-gap: 3px;
+		grid-template-areas: 
+			"header"
+			"nav"
+			"main"
+			"main"
+			"main"
+			"aside"
+			"footer";
+		background-color: black;
+	}
+			
+	.header {
+		grid-area: header;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.nav {
+		grid-area: nav;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.main {
+		grid-area: main;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.aside {
+		grid-area: aside;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer {
+		grid-area: footer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	
+	@media (min-width: 769px), 
+		(min-width: 700px) and (orientation: landscape) {
+		.grid {
+			grid-template-columns: repeat(7, 1fr);
+			grid-template-rows: repeat(12, 1fr);
+			grid-template-areas:
+				"header header header header header header header"
+				"nav nav nav nav nav nav nav"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"main main main main main aside aside"
+				"footer footer footer footer footer footer footer";
+		}
+	}
+	
+	
+	@media (min-width: 900px) {
+		.grid {
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: repeat(12, 1fr);
+			grid-template-areas:
+				"header header header header header header header header"
+				"nav nav nav nav nav nav nav nav"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"main main main main main main aside aside"
+				"footer footer footer footer footer footer aside aside";
+		}
+	}
+	
+/*-------------------------- /style //////////////////////////////*/
+</style>
+</head>
+<body>
+<main>
+<!-- <noscript> is for users who have javascript turned off. instructions on how to enable javascript. ik you can modify the inline style how you want and beware of top nav bar-->
+    <noscript style="border: red 2px solid; font-weight: bolder; padding-bottom: 4px;">
+     For full functionality of this site it is necessary to enable JavaScript to its normal settings.
+     Here are the <a href="https://www.enable-javascript.com/" target="_blank">
+     instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+<!--+ + + + + + + + + + + + + MAIN ------------------------------->
+
+	
+  <div class="grid">
+    <header class="header bg-primary text-white">Header</header>
+    <nav class="nav bg-secondary  text-white">Nav</nav>
+    <main class="main bg-success  text-white">Main</main>
+    <aside class="aside bg-danger  text-white">Aside</aside>
+    <footer class="footer bg-warning  text-white">Footer</footer>
+  </div>
+
+	
+<!-------------------------- /main /////////////////////////////-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelement-and-player.min.js" type="text/javascript"></script>
+<script src="zIK/03JS/kiK.js" type="text/javascript"></script>
+<script>
+/* + + + + + + + + + + + + + SCRIPT ------------------------------*/
+/*------------------------- /script /////////////////////////////*/
+// printD(html);
+// everyStyles(DOMelement);
+// ascii(a, b);
+// patternIndexNumber(theArrayz, searchThisValue);
+// cssSupport(cssProperty, cssValue);	
+// listAttributes(DOMnode);
+// serialize(formDOMelement);
+// serializeObject();
+</script>
+</main>
+</body>
+</html>

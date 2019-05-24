@@ -1,0 +1,176 @@
+/*        by ilshaad kheerdali 2019 02 24 */
+/* THE SET UP CSS GRID LAYOUT AND BACKGROUND IMAGE */
+*,
+*::before,
+*::after    {
+    box-sizing: border-box;
+/*    font-size: 100%;   - apparently this negate the actual size of h2/h3/etc */
+line-height: 1.4;
+}
+
+/***********************************/
+
+/* CSS GRID LAYOUT */
+
+/* add as many grid items you like as long as it is direct child to div#body_wrapper tag . also name the grid item with grid-area: , then you can place it along with the other grid items (header / main / footer) */
+div#body_wrapper {
+	position: relative;       /*for image background*/
+	height: 100vh;
+	width: 100vw;        /*iK my recent  personal add on as it makes sense*/
+	display: grid;
+	grid-template-columns: 1fr;       /* 1 column since its mobile/tablet*/
+	grid-auto-rows: minmax(180px, auto);   /*depending how many containers you have than set the minimum you prefer*/
+	grid-row-gap: 0.5%;   /*ik set whatever you prefer*/
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";          /* ensure you enter all the grid items*/
+}
+
+/* naming the grid items */
+header#main_header {
+	grid-area: header;
+}
+
+main#main_page {
+	grid-area: main;
+}
+
+footer#main_footer {
+	grid-area: footer;
+}
+
+/* 768px plus 700px landscape */
+@media only screen and (min-width: 768px),
+       only screen and (min-width: 700px) and (orientation: landscape) /*might want to consider 768px but test it out first*/ {
+		   div#body_wrapper {
+			   grid-template-rows: 1fr 4fr 1fr;
+		   }
+}
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* 1200px */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* ik feel free to adjust to your project as grid is so flexible and if you need to check Guil (treeshouse copy) version for ideas  - eg/guilGrideg.html */
+
+/*******************************************************************/
+
+/* BACKGROUND IMAGE
+inserting main background images which will always center and cover to whole page.  2 ways you can choose ik (https://css-tricks.com/perfect-full-page-background-image/  = for more info on 'Perfect Full Page Background Image' )
+.1st way = #Awesome, Easy, Progressive CSS3 Way -*/
+/*
+div#background_image {
+  background: url(images/ali.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+
+/*+\ main reason to use this is if you want to use the other background properties and style it further .
++\ be sure that the div box is place before body and div#body_wrapper as this will be an exclusive div box.
++\ also do not forget to add an extra background-color for fall back
++\ insert position: relative; on the div#body_wrapper otherwise it you will not see work
+-
+.2nd way = #CSS-Only Technique #1
++\ first simple set image in <img id="backgroundImg"> within your div#background_image html*/   /*
+img#backgroundImg {
+/*Set rules to fill background * /
+  min-height: 100%;
+  min-width: 1024px;     /*ik this is eg, but set the width image px here * /
+/* Set up proportionate scaling * /
+  width: 100%;
+  height: auto;
+/* Set up positioning * /
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {   /*Specific to this particular image * /
+  img#backgroundImg {
+    left: 50%;
+    margin-left: -512px;   /* 50% of 1024px,  ik this is eg, but set half of width image px here * /
+  }
+}
+*/
+/*+\ main reason to use this is if you have a fairly large image and you do not need to use any of the background properties than this is a good choice
++\ also do not forget to add an extra background-color for fall back
++\ insert position: relative; on the div#body_wrapper otherwise it you will not see work
+*/
+
+/* end of CSS GRID LAYOUT AND BACKGROUND IMAGE OVER AND NOW DESIGN YOUR WEB SITE */
+
+/*
+++++++++++++++++++++++++++++++++
+CLEARFIX   for floated elements
+++++++++++++++++++++++++++++++++
+*/
+.clearfixik::before,
+.clearfixik::after    {
+    content: " ";
+    clear: both;
+    display: table;
+}
+/*slightly change its name because of bootstrap .clearfix version which uses display: block;*/
+
+/*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+BASE SYNTAX FOR ALL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+*/
+
+/* ik recommended eg prefix with your css properties:
+-webkit-transform:translateZ( -150px );
+   -moz-transform:translateZ( -150px );
+    -ms-transform:translateZ( -150px );
+     -o-transform:translateZ( -150px );
+        transform:translateZ( -150px );
+   */
+
+div#body_wrapper {
+	position: relative; /* for image background */
+
+}
+
+header#main_header {
+}
+
+main#main_page {
+}
+
+footer#main_footer {
+}
+
+
+/* ik i am still undecided if i should just use @media alone instead of the other things, need more research , but for now delete 'only screen and' */
+/* specific mobile css */
+@media only screen and (max-width: 767px) /*480px main focus*/ {
+
+}
+
+
+/* 768px plus 700px landscape */
+@media only screen and (min-width: 768px),
+       only screen and (min-width: 700px) and (orientation: landscape) /*might want to consider 768px but test it out first*/ {
+
+}
+
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/* 1200px */
+@media only screen and (min-width: 1200px) {
+
+}
