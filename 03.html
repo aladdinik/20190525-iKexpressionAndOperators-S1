@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">    <!-- by ilshaad kheerdali 2019 02 26 -->
-	                <!-- enter brief description of the page -->
+<html lang="en"> <!-- enter brief description of the page -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<!--   insert zIK/02css/aReset.css or zIK/02css/normalize.css CDN or bootstrap 4 CDN (always check for updated version) -->    
-	<link href="" rel="stylesheet" type="text/css">
-	
-<!--   insert mediaelementplayer.min.css (located in build folder) (or CDN) for MediaElement.js if you want to style video or audio element (check latest version) -->
-    <link href="" rel="stylesheet" type="text/css">
-	
-<!--   insert optional mediaelementplayer.js plugins (.min.css file located in dist folder) (or CDN) for extra features (check latest version) -->
-    <link href="" rel="stylesheet" type="text/css">
-	
-<!--   insert zIK/02css/oikGrid.css or zIK/02css/oikFlex.css for responsive layout and background-image -->
-    <link href="" rel="stylesheet" type="text/css">
-    <title></title>
+<!--    <link href="zIK/02css/aReset.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/normalize.css" rel="stylesheet" type="text/css">-->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
+    <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
+<!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
+    <title>03 ... (spread syntax)</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
-
-
-
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -33,28 +24,33 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
-
-
-
 <!-------------------------- /main /////////////////////////////-->
-<!-- insert jQuery CDN slim minified or external file version (check you have the latest version) -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<!-- insert popper.js CDN from bootstrap (check you have the latest version) -->
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
-<!-- insert boostrap 4 CDN (check you have the latest version) -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- insert MediaElement.js (located in build folder) or CDN if you want to style video/audio element (check you have the latest version) mediaelement-and-player.min.js file -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelement-and-player.min.js" type="text/javascript"></script>
-<!--   insert optional mediaelementplayer.js plugins (both .min.js file and -i18n.js file located in dist folder) (or CDN) for extra features (check latest version) -->
-<script src="" type="text/javascript"></script>
-<script src="" type="text/javascript"></script>
-<!--   insert javascript reference function if any - zIK/03JS/kik.js -->
-<script src="" type="text/javascript"></script>
-<script type="text/javascript">
+<script src="zIK/03JS/kiK.js" type="text/javascript"></script>
+<script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
+	
+	                     /*from mdn*/
+/* ... (spread syntax) */
+	function sum(x, y, z) {
+	  return x + y + z;
+	}
 
+	const numbers = [1, 2, 3];
 
+	console.log( sum( ...numbers ) );
+	// expected output: 6
+
+	console.log( sum.apply( null, numbers ) );
+	// expected output: 6
+
+	/*basically ... saves you time from typing array/object/argument again, and works similar to .concat() in other examples*/
+
+	
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);

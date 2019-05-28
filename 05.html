@@ -3,55 +3,79 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<!--    <link href="ziK/02css/aReset.css" rel="stylesheet" type="text/css">-->
-<!--    <link href="ziK/02css/normalize.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/aReset.css" rel="stylesheet" type="text/css">-->
+<!--    <link href="zIK/02css/normalize.css" rel="stylesheet" type="text/css">-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
-<!--	<link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>DEBUG</title>
+<!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
+    <title>05 more delete operator examples from mdn</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
-
-
-
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
 <body>
-<div id="background_image">
-<div id="body_wrapper">
-<header id="main_header">
+<main>
 <!-- <noscript> is for users who have javascript turned off. instructions on how to enable javascript. ik you can modify the inline style how you want and beware of top nav bar-->
     <noscript style="border: red 2px solid; font-weight: bolder; padding-bottom: 4px;">
      For full functionality of this site it is necessary to enable JavaScript to its normal settings.
      Here are the <a href="https://www.enable-javascript.com/" target="_blank">
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
-<!--+ + + + + + + + + + + + + HEADER ------------------------------->
-<!-------------------------- /header ////////////////////////////-->
-</header>
-<main id="main_page">
-<!--    consider changing for a smaller width for main-->
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
-
-
-
-	
 <!-------------------------- /main /////////////////////////////-->
-</main>
-<footer id="main_footer">
-<!--+ + + + + + + + + + + + + FOOTER ------------------------------->
-<!-------------------------- /footer ////////////////////////////-->
-</footer>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelement-and-player.min.js" type="text/javascript"></script>
 <script src="zIK/03JS/kiK.js" type="text/javascript"></script>
-<script>/* insert additional javascript if any */
+<script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
+	
+							/*mdn*/
+	// Creates the property adminName on the global scope.
+	adminName = 'xyz';            
+
+	// Creates the property empCount on the global scope.
+	// Since we are using var, this is marked as non-configurable. The same is true of let and const.
+	var empCount = 43;
+
+	EmployeeDetails = {
+	  name: 'xyz',
+	  age: 5,
+	  designation: 'Developer'
+	};
+
+	// adminName is a property of the global scope.
+	// It can be deleted since it is created without var,
+	// and is therefore configurable.
+	delete adminName;       // returns true
+
+	// On the contrary, empCount is not configurable
+	// since var was used.
+	delete empCount;       // returns false 
+
+	// delete can be used to remove properties from objects.
+	delete EmployeeDetails.name; // returns true 
+
+	// Even when the property does not exist, delete returns "true".
+	delete EmployeeDetails.salary; // returns true 
+
+	// delete does not affect built-in static properties.
+	delete Math.PI; // returns false 
+
+	// EmployeeDetails is a property of the global scope.
+	// Since it was defined without "var", it is marked configurable.
+	delete EmployeeDetails;   // returns true
+
+	function f() {
+	  var z = 44;
+
+	  // delete doesn't affect local variable names
+	  delete z;     // returns false
+	}
 
 
 /*------------------------- /script /////////////////////////////*/
@@ -64,7 +88,6 @@
 // serialize(formDOMelement);
 // serializeObject();
 </script>
-</div>
-</div>
+</main>
 </body>
 </html>
