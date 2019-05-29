@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- enter brief description of the page -->
+<html lang="en"> <!-- 10 instanceof Operator -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,12 +9,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>10</title>
+    <title>10 instanceof Operator</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
-
-
-
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -27,9 +24,6 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
-
-
-
 <!-------------------------- /main /////////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -39,8 +33,31 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
+	
+/* instanceof Operator */
+	var cars = ["Saab", "Volvo", "BMW"];
 
+	cars instanceof Array;       /* Returns true*/
+	cars instanceof Object;      /* Returns true*/
+	cars instanceof String;      /* Returns false*/
+	cars instanceof Number;      /* Returns false*/
+	
+	console.log(	cars instanceof Function )  /*false*/
+	
 
+	/****************************/
+	
+	
+/* will not work with simple value, you need to use object constructors */
+	/* no constructor in ik1*/
+	const ik1 = "kratos";
+	console.log(	ik1 instanceof String ) /*false*/
+	
+	/* constructor in ik2*/
+	const ik2 = new String(`kratos`);
+	console.log(	ik2 instanceof String  ) /*true*/
+	
+	
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);

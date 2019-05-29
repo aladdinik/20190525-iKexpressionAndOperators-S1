@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- enter brief description of the page -->
+<html lang="en"> <!-- 06 void operator / typeof operator and Number() / String() / Boolean() -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,12 +9,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>06 </title>
+    <title>06 void operator / typeof operator and Number() / String() / Boolean()</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
-
-
-
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -27,9 +24,6 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
-
-
-
 <!-------------------------- /main /////////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -39,8 +33,28 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
+	
+/*void operator*/
+	let ik = [1, "", 3, null];
+	
+	ik[1] = void ik[1];
+	
+	console.log(ik);  /*ik[1] is now undefined and not an empty string*/
+	/*void simply converts value into undefined*/
+	
+	
+	/******************/
+	
+	
+/*typeof operator and Number() / String() / Boolean()*/
+	console.log(typeof ik[3]); /*output 'object' - which is null*/
+	
+	ik[1] = Number(7); /*1+  - output 7*/
+	console.log(ik)
+		/*1+ it is an object
+		1+ you could also use String("") and Boolean() (true or false for Boolean())*/
 
-
+	
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);

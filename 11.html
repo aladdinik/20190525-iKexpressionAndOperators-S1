@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- 09 more example of in operator from w3school -->
+<html lang="en"> <!-- 11 , Comma operator / multiple for loop assignment -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,7 +9,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>09 more example of in operator from w3school</title>
+    <title>11 , Comma operator / multiple for loop assignment</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
 /*-------------------------- /style //////////////////////////////*/
@@ -33,25 +33,23 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
+
+/* , Comma operator */
+	/* it will evaluate each value from left to right and the last value will be the main value if there is a comma*/
+	let x = 1;
+	x = (x++, x);
+	console.log( x );   /* expected output: 2 */
+
 	
-	/* Arrays */
-	var cars = ["Saab", "Volvo", "BMW"];
-	"Saab" in cars         /* Returns false (specify the index number instead of value)*/
-	0 in cars              /* Returns true*/
-	1 in cars              /* Returns true*/
-	4 in cars              /* Returns false (does not exist)*/
-	"length" in cars       /* Returns true  (length is an Array property)*/
-
-	/* Objects */
-	var person = {firstName:"John", lastName:"Doe", age:50};
-	"firstName" in person  /* Returns true*/
-	"age" in person        /* Returns true*/
-
-	/* Predefined objects */
-	"PI" in Math           /* Returns true*/
-	"NaN" in Number        /* Returns true*/
-	"length" in String     /* Returns true*/
-
+	x = (2, 3, 6);
+	console.log( x );  /* expected output: 6 */
+	
+	
+/*multiple for loop assignment*/
+	/*possible use for 2 dimensional array*/
+	for (let i = 0, j = 6; i <= 6, j >= 0; i++, j--) {
+  		console.log( '[i' + i + '][j' + j + ']');
+	};
 
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
