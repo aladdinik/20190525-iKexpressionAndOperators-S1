@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- 02 this expression / new operator -->
+<html lang="en"> <!-- enter brief description of the page -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,9 +9,12 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>02 this expression / new operator</title>
+    <title></title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
+
+
+
 /*-------------------------- /style //////////////////////////////*/
 </style>
 </head>
@@ -24,6 +27,9 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + + + MAIN ------------------------------->
+
+
+
 <!-------------------------- /main /////////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -33,27 +39,8 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
-	/*mdn*/
 
-	function company(make, model, year) {
-	  this.maker = make;              /*1+*/
-	  this.modeler = model;
-	  this.yearer = year;
-	};
 
-	const car1 = new company('Eagle', 'Talon TSi', 1993); /*creates a new object company function but will not store argument in old company function*/
-
-	
-	console.log( car1 ); 	/* [object][object] - shows function object car1*/
-	
-	console.log( car1[`maker`] ); 	/* "Eagle" - stored in car1 object now*/
-	
-	console.log( company[`maker`] );  /* undefined - because argument was not stored in company function. plus it is still a function, not an object */
-
-		/*1+ `this` represent the function itself.
-		1+ '.maker' creates an object within the function, however, 'make' itself is not define	*/
-	
-	
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);
