@@ -9,7 +9,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title>13 'this' in a object</title>
+    <title>12 IK S1 12.HTML START / Understanding "this" in JavaScript (treehouse new course) / 'this' in a normal function</title>
 <style>
 /* + + + + + + + + + + + + + STYLE -------------------------------*/
 /*-------------------------- /style //////////////////////////////*/
@@ -33,20 +33,16 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
-
-/* 'this' in a object */
-	/*ensure to use return keyword whenever possible because it makes a difference */
-	const Portland = {
-		br: 12,
-		ai: function () { return this[`br`] },
-	};/*END Portland*/
 	
-	console.log ( Portland.ai() ); /*OP: 12*/
-		/*without return keyword it will become undefined*/
-	
+/*'this' in a normal function */
+	function helloWorld() {
+	  console.log("Hello ik world!"); 
+	  console.log(typeof this);     /*output: object*/
+	  console.log(this);            /*1+*/
+	};
+		/*1+ OP: the window object of the function*/       
 
-	
-
+	helloWorld();  /*calling the function*/
 	
 	
 /*------------------------- /script /////////////////////////////*/
