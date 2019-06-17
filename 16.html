@@ -35,9 +35,11 @@
 
 /* remember you are still allowed to use the function as a normal function with other codes*/
 	function company(make, model, year) {
-		let maker = make || "ik";           
+		let maker = make || "ik";      
+		
 		this[`model`] = model || 2;
 		this[`year`] = year || 3;
+		
 		console.log(maker);
 	};/*END company()*/
 		/*cannot use a construction function without 'this'*/
