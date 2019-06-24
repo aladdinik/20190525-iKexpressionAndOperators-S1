@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- enter brief description of the page -->
+<html lang="en"> <!-- 16 a simpler outlook of a construction function with 'this' -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -36,33 +36,33 @@
 /* remember you are still allowed to use the function as a normal function with other codes*/
 	function company(make, model, year) {
 		let maker = make || "ik";      
-		
+
 		this[`model`] = model || 2;
 		this[`year`] = year || 3;
-		
+
 		console.log(maker);
 	};/*END company()*/
 		/*cannot use a construction function without 'this'*/
-	
-		
+
+
 	console.log(  new company() ); 
 		/*OP: "ik" company {model: 2, year: 3}*/
-	
-	
+
+
 	console.log(  new company("mm", "b", "c") );
 		/*OP: "mm" company {model: "b", year: "c"}*/
-	
-	
+
+
 	/*.constructor*/
 	console.log(company.constructor); /*OP: function(){} */
-	
-	
+
+
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);
 // ascii(a, b);
 // patternIndexNumber(theArrayz, searchThisValue);
-// cssSupport(cssProperty, cssValue);	
+// cssSupport(cssProperty, cssValue);
 // listAttributes(DOMnode);
 // serialize(formDOMelement);
 // serializeObject();

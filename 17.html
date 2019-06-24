@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- enter brief description of the page -->
+<html lang="en"> <!-- 17 .constructor -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -33,32 +33,32 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
-	
+
 /*.constructor*/
 	var a = {};
 	a.constructor === Object;     /*OP: true*/
 	console.log(a.constructor);   /*OP: Object() { [native code] } */
-	
+
 
 	var b = new Object;
 	b.constructor === Object;     /*OP: true*/
 	console.log(b.constructor);   /*OP: Object() { [native code] } */
 
-	
+
 	var c = [];
 	c.constructor === Array;      /*OP: true*/
 	console.log(c.constructor);   /*OP: Array() { [native code] } */
-	
-	
+
+
 	var d = new Array;
 	d.constructor === Array;      /*OP: true*/
 	console.log(d.constructor);   /*OP: Array() { [native code] } */
-	
-	
+
+
 	var e = new Number(3);
 	e.constructor === Number;     /*OP: true*/
 	console.log(e.constructor);   /*OP: Number() { [native code] } */
-	
+
 	var f = new function(){};
 	console.log(f.constructor === Function);   /*OP: false*/
 	console.log(f.constructor);   /*OP: (){} */
@@ -66,14 +66,14 @@
 
 	/* BIM they are all function stored in a constructor.
 	+\ a great way to know if your syntax is a constructor and what kind of syntax you have*/
-	
-	
+
+
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);
 // ascii(a, b);
 // patternIndexNumber(theArrayz, searchThisValue);
-// cssSupport(cssProperty, cssValue);	
+// cssSupport(cssProperty, cssValue);
 // listAttributes(DOMnode);
 // serialize(formDOMelement);
 // serializeObject();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- enter brief description of the page -->
+<html lang="en"> <!-- 13 'this' in a object -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -45,26 +45,26 @@
 	};/*END Portland*/
 		/*1+ notice this.soccerTeams . 'this' represents Portland
 		+\ use return whenever possible */
-	
+
 	console.log(Portland.airport); /*OP: the window object*/
 		/*BIM however 'airport: this.bridges' is undefined and cannot work without and annoymous function and then you call it with () */
-	
-	
+
+
 	function logTeams () {
 		 console.log(this);
 		 console.log(this.bridges);
 	}/*END logTeams*/
 
-	
+
 	Portland.foo = logTeams; 
 		/*created a new property 'foo' in Portland object which stores the function logTeams*/
 
-	
+
 	Portland.foo(); /*output1: Portland object / output2: 12*/ 
 	/*using the () callback function in logTeams() because it is a function.
 	+\ output is the object of Portland, as the 'this' represent the object name*/
-	
-	
+
+
 	logTeams(); /*OP1: logTeam window object of the function / OP2: undefined */
 	/* it is a separate entity from the Portland object
 	+\ OP2 so therefore 'this.bridges' will be undfined because it does not any object to refer to*/
@@ -72,18 +72,18 @@
 
 	Portland.logNumberOfBridges();  /*OP: 44 */ 
 	/*it will not trigger console.log inside without the parenthesis */
-	
-	
+
+
 	console.log(Portland.logNumberOfBridges); 	/*OP: its strings formation*/
 	/*will only show as string but not a function*/
-	
-	
+
+
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);
 // ascii(a, b);
 // patternIndexNumber(theArrayz, searchThisValue);
-// cssSupport(cssProperty, cssValue);	
+// cssSupport(cssProperty, cssValue);
 // listAttributes(DOMnode);
 // serialize(formDOMelement);
 // serializeObject();

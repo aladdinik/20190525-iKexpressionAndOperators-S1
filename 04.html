@@ -33,7 +33,7 @@
 <script>
 /* + + + + + + + + + + + + + SCRIPT ------------------------------*/
 
-	
+
 						/*mdn*/
 /* delete operator */
 	var Employee = {
@@ -48,27 +48,27 @@
 
 	console.log(Employee.firstname);
 	/* expected output: undefined*/
-	
-	
+
+
 	/***************/
 
-	
+
 /* however not ideal to use on array as it will not reduce .length of array */
 	let arr = [];
-	
+
 	arr.push(1, 2, 3);
-	
+
 	delete arr[1];
-	
+
 	console.log(arr); /*output: [1, empty, 3] */
 	console.log(arr.length); /*output: 3 */
 	/*still remains 3 value despite there only being 2
 	+\ the deleted value is now undefined*/
-	
-	
+
+
 	/*****************/
-	
-	
+
+
 /*can use the delete operator as a boolean value. also unable to delete declared variable */
 	/*declared variable*/
 	let ik1 = 1;
@@ -79,15 +79,15 @@
 	ik2 = 2;
 	console.log(delete ik2); /*true*/
 	console.log(ik2); /*nothing because it no longer exist (no declared)*/
-	
 
-	
+
+
 /*------------------------- /script /////////////////////////////*/
 // printD(html);
 // everyStyles(DOMelement);
 // ascii(a, b);
 // patternIndexNumber(theArrayz, searchThisValue);
-// cssSupport(cssProperty, cssValue);	
+// cssSupport(cssProperty, cssValue);
 // listAttributes(DOMnode);
 // serialize(formDOMelement);
 // serializeObject();
