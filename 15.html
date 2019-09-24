@@ -46,7 +46,7 @@
 	/*1+ .name and .state is not change by the parameter of the function as they are object.
 	1+ || the OR logical operand is being used. and if no argument is pass through to the parameter than the alternative will be automatically be selected.
 	1+ 'this' does not represent City itself because it will remain undefined. the 'this' will represent the 'new' constructor instance you form in a new variable such as Portland (below).
-	    +\ so you cannot use City.name because it will be undefined.
+	    +\ so you cannot use City.name because it will be undefined and still a function, not an object.
 	1+ the = sign is being used despite it having characteristic of object, but think of it as a new variable that you are declaring*/
 
 
@@ -55,7 +55,7 @@
 	seattle = new City('Seattle', 'Washington');
 	salem = new City('Salem');                  /*1+*/
 		/*1+ or i could use (undefined, "Salem") to add to the second argument*/
-		/*notice they are not using const/let/var which you can use by the way if you wanted to.
+		/*notice they are not using const/let/var which you can use by the way if you wanted to. But the variables are configurables.
 		+\ you have to use the 'new' constructor otherwise calling one of the object will not work and be undefined*/
 
 
